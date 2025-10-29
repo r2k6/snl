@@ -1,0 +1,8 @@
+#!/bin/bash
+read -p "Enter directory path: " dir_path
+if [ !-d "$dir_path" ]; then
+echo "Invalid directory path: $dir_path"
+exit 1
+fi
+echo "Directory structure of $dir_path:"
+tree "$dir_path"
