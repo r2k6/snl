@@ -1,0 +1,22 @@
+CLIENT SIDE 
+
+import socket
+a=input("Enter a message:")
+client_socket-socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+server_socket_address=('localhost', 5000)
+client_socket.sendto(a.encode(),server_socket_address)
+data,addr=client_socket.recvfrom(4000)
+print("Received from server:", data.decode())
+client_socket.close()
+
+SERVER SIDE 
+
+import socket
+server_socket-socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
+server_socket.bind(('localhost', 5000))
+print("UDP server is listening on port 12345...")
+data,addr=server_socket.recvfrom(4000)
+print("Received from client:",data.decode())
+a=input("Enter a message:")
+server_socket.sendto(a.encode(),addr)
+server_socket.close()
