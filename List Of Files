@@ -1,0 +1,9 @@
+#!/bin/bash
+read -p "Enter directory path: "
+dir_path
+if [ !-d "Sdir_path" ]; then
+echo "Invalid directory path:
+Sdir_path"
+exit 1
+fi
+ls -1 "Sdir_path"
