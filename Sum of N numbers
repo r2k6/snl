@@ -1,0 +1,10 @@
+echo "Enter the number:" 
+read n 
+sum-0
+i=1 
+while [Si-le Sn] 
+do 
+sum=$((sum+i))
+i=$((i+1))
+done
+echo "Sum of first Sn numbers is:$sum"
