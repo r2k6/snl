@@ -1,0 +1,3 @@
+#!/bin/bash
+count-S(who | wc -l)
+echo "Number of users currently logged in: $count"
